@@ -1,1 +1,17 @@
-/* Write your CSS here */
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e293b;
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  background-size: cover;
+}
+
+.notfound-text {
+  color: #ffffff;
+  font-size: 42px;
+  font-family: 'Bree Serif';
+}
