@@ -66,3 +66,31 @@
     margin-top: 32px;
   }
 }
+
+.back-button {
+  background-color: #ffffff;
+  color: #1e293b;
+  font-family: 'Bree Serif';
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.statistics-container {
+  background-color: #ffffff33;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+}
+
+.statistics-container h2 {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  margin-bottom: 16px;
+}

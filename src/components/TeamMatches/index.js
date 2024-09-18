@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
-
+import {Link} from 'react-router-dom'
+import {PieChart, Pie, Legend, Cell} from 'recharts'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
 
@@ -79,27 +80,60 @@ class TeamMatches extends Component {
     const {params} = match
     const {id} = params
     const {recentMatchesData} = this.state
-    const {teamBannerURL, latestMatch} = recentMatchesData
+    const {teamBannerURL, latestMatch, recentMatches} = recentMatchesData
+
+    const wonMatches = recentMatches.filter(
+      matches => matches.matchStatus === 'Won',
+    ).length
+    const lostMatches = recentMatches.filter(
+      matches => matches.matchStatus === 'Lost',
+    ).length
+    const drawnMatches = recentMatches.length - wonMatches - lostMatches
+
+    const data = [
+      {name: 'Won', value: wonMatches},
+      {name: 'Lost', value: lostMatches},
+      {name: 'Drawn', value: drawnMatches},
+    ]
+
+    const COLORS = ['#00C49F', '#FF8042', '#FFBB28']
 
     return (
       <div className="team-matches-container">
+        <Link to="/" className="back-button">
+          Back
+        </Link>
         <img src={teamBannerURL} alt="team banner" className="team-banner" />
         <LatestMatch latestMatchData={latestMatch} />
+        <div className="statistics-container">
+          <h2>Match Statistics</h2>
+          <PieChart width={400} height={400}>
+            <Pie
+              data={data}
+              cx={200}
+              cy={200}
+              labelLine={false}
+              outerRadius={80}
+              fill="#8884d8"
+              dataKey="value"
+            >
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${entry.name}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+            <Legend />
+          </PieChart>
+        </div>
         {this.renderRecentMatchesList()}
       </div>
     )
   }
 
   renderLoader = () => (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div data-testid="loader" className="loader-container">
-=======
-    <div testid="loader" className="loader-container">
->>>>>>> Old repo
-=======
-    <div data-testid="loader" className="loader-container">
->>>>>>> data-testid updated
       <Loader type="Oval" color="#ffffff" height="50" />
     </div>
   )
