@@ -100,8 +100,10 @@ class TeamMatches extends Component {
 
     return (
       <div className="team-matches-container">
-        <Link to="/" className="back-button">
-          Back
+        <Link to="/" className="back-button-container">
+          <button type="button" className="back-button">
+            Back
+          </button>
         </Link>
         <img src={teamBannerURL} alt="team banner" className="team-banner" />
         <LatestMatch latestMatchData={latestMatch} />
