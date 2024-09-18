@@ -48,7 +48,11 @@ class Home extends Component {
   }
 
   renderLoader = () => (
+<<<<<<< HEAD
     <div data-testid="loader" className="loader-container">
+=======
+    <div testid="loader" className="loader-container">
+>>>>>>> Old repo
       <Loader type="Oval" color="#ffffff" height="50" />
     </div>
   )
