@@ -49,10 +49,14 @@ class Home extends Component {
 
   renderLoader = () => (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div data-testid="loader" className="loader-container">
 =======
     <div testid="loader" className="loader-container">
 >>>>>>> Old repo
+=======
+    <div data-testid="loader" className="loader-container">
+>>>>>>> data-testid updated
       <Loader type="Oval" color="#ffffff" height="50" />
     </div>
   )
