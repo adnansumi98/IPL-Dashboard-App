@@ -83,7 +83,7 @@ class TeamMatches extends Component {
 
     return (
       <div className="team-matches-container">
-        <img src={teamBannerURL} alt={id} className="team-banner" />
+        <img src={teamBannerURL} alt="team banner" className="team-banner" />
         <LatestMatch latestMatchData={latestMatch} />
         {this.renderRecentMatchesList()}
       </div>

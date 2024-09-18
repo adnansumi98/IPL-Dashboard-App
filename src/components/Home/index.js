@@ -62,7 +62,7 @@ class Home extends Component {
           <div className="ipl-dashboard-heading-container">
             <img
               src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png"
-              alt="ipl-logo"
+              alt="ipl logo"
               className="ipl-logo"
             />
             <h1 className="ipl-dashboard-heading">IPL Dashboard</h1>
