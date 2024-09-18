@@ -1,8 +1,8 @@
 import './index.css'
 
 const NotFound = () => (
-  <div className="notfound-container">
-    <p className="notfound-text">Page Not Found !!</p>
+  <div className="not-found-route-container">
+    <h1 className="not-found-heading">Page Not Found !!</h1>
   </div>
 )
 

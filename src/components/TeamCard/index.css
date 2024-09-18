@@ -1,42 +1,66 @@
-.team-card-container {
-  border: solid #ffffff 2px;
-  background-color: #ffffff33;
-  border-radius: 10px;
-  min-width: 40vw;
-  margin: 10px;
-  list-style: none;
-}
-.team-card-image {
-  width: 5vw;
-}
-.team-card-name {
-  margin-left: 10px;
-  font-size: 20px;
-  color: #fff;
-  font-family: 'Bree Serif';
-  text-align: center;
-}
-.team-contents-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  min-width: 40vw;
-  padding: 10px;
+.link-item {
+  text-decoration: none;
+  width: 50%;
 }
 
-@media (max-width: 576px) {
-  .team-card-container {
-    max-width: 40vw;
-    max-height: 10vh;
+.team-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff33;
+  height: 85%;
+  border-radius: 12px;
+  border: 1px solid #ffffff;
+  padding-left: 7px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 7px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-card {
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
   }
-  .team-card-image {
-    width: 10vw;
+}
+
+.team-logo {
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-logo {
+    width: 80px;
+    height: 80px;
   }
-  .team-card-name {
-    font-size: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .team-logo {
+    width: 150px;
+    height: 150px;
   }
-  .team-contents-container {
-    max-width: 40vw;
-    max-height: 10vh;
+}
+
+.team-name {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-name {
+    font-size: 32px;
+    margin-left: 16px;
   }
 }
